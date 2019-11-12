@@ -1,0 +1,68 @@
+ROADMAP
+===========================
+
+DOCUMENTS
+------------------------------
+- 결정론적 게임 플레이 (Deterministic Gameplay)
+  - 시작하며
+    - 결정론적 게임 플레이의 장단점
+    - 결정론적 게임 플레이 개발의 어려움
+    - 결정론적 게임 플레이의 간단한 원리
+  - 부동소수점 표현
+    - 완전한 직렬화
+  - 고정소수점 표현
+    - 2진수 기반 고정 소수점
+    - 10진수 기반 고정 소수점
+  - 무작위성
+    - 의사난수
+    - 메르센 트위스터
+  - 닫힌 세계
+    - 외부 입력 관리
+    - 내부 상태 관리
+  - 렌더링
+  - 리플레이
+- Vnv
+  - VSCode Extension
+    - Language Server
+  - Maskox (Gaussian Blur)
+- 애니메이션
+  - 푸아송 비
+  - 스프링 애니메이션
+- C# Any
+- Isometric Map
+- 유니코드
+  - 개요
+  - UTF-8, UTF-16, UTF-32 인코딩
+  - 정규화 (NFC, NFD, ...)
+- Unity3D
+  - null vs null
+  - 최적화
+    - for vs foreach
+    - C# Generic 원리
+    - List<T>.Sort에서의 GC Alloc
+  - Owlvector
+  - Server Sent Events
+    - 개요
+    - Unity3D 구현
+    - ASP.NET Core 구현
+- Database
+  - 식별자 연구
+    - Auto Increment vs GUID
+    - ULID
+    - 인스타그램의 ID
+    - 트위터의 Snowflake
+    - MongoDB의 _id
+  - Restful API
+  - RDF
+- 미디어
+  - 이미지
+    - 색상 표현
+      - RGB, RGBA, YUV, HSV
+    - 코덱 비교 (bmp, png, jpg, ...)
+    - JPG 원리
+      - 푸리에 변환
+      - 이산 코사인 변환
+  - 오디오
+    - 소리 표현
+    - 코덱 비교 (wav, mp3, flac, ...)
+    - 메타데이터 (id3v2, ape tag, vorbis comment)
