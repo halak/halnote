@@ -1,3 +1,5 @@
-venv/
+docs/assets/javascripts/
+docs/assets/stylesheets/
 node_modules/
 site/
+venv/

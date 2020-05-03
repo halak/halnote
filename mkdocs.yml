@@ -1,16 +1,21 @@
-site_name: 할락의 노트
-nav:
-  - 'index.md'
-  - 'poisson-ratio.md'
+site_name: 할락
+site_url: https://halak.github.io/
+site_description: 할락의 노트
+site_author: HALAK SHIN
 theme:
   name: material
   language: kr
-  favicon: 'assets/images/favicon.ico'
-  logo:
-    icon: 'videogame_asset'
+  favicon: 'favicon.ico'
+  logo: 'assets/images/logo.svg'
   palette:
     primary: blue
     accent: blue
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/halak
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/halakshin
 markdown_extensions:
   - toc:
       permalink: true
@@ -25,7 +30,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -33,6 +39,16 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed
   - pymdownx.tilde
+plugins:
+  - search:
+      prebuild_index: true
+  - awesome-pages
+  - minify:
+      minify_html: true
 extra_javascript:
+  - 'assets/javascripts/main.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+extra_css:
+  - 'assets/stylesheets/theme.css'

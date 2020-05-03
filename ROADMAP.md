@@ -66,3 +66,4 @@ DOCUMENTS
     - 소리 표현
     - 코덱 비교 (wav, mp3, flac, ...)
     - 메타데이터 (id3v2, ape tag, vorbis comment)
+  - 압축
