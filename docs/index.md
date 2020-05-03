@@ -20,6 +20,3 @@ title: 소개
 
 ## 연락처
 [halakshin@gmail.com](mailto:halakshin@gmail.com)
-
-
-<canvas data-src="hello" width="300" height="300"></canvas>

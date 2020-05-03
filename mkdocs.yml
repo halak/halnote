@@ -2,6 +2,8 @@ site_name: 할락
 site_url: https://halak.github.io/
 site_description: 할락의 노트
 site_author: HALAK SHIN
+repo_url: https://github.com/halak/halnote/
+strict: true
 theme:
   name: material
   language: kr

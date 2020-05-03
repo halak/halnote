@@ -14,7 +14,7 @@
         console.error(exception);
         return;
     }
-        
+
     const args = [
         'gh-deploy',
         '--config-file', config,
