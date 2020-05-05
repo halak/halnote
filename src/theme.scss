@@ -1,3 +1,67 @@
 canvas[data-src] {
     border: 1px solid black;
 }
+
+.bitfield {
+    display: flex;
+    flex-direction: row;
+
+    label {
+        width: 20px;
+        height: 20px;
+        flex: 1;
+    }
+
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    [type="checkbox"] {
+        +span {
+            position: relative;
+            user-select: none;
+        }
+        +span:before,
+        +span:after {
+            content: '';
+            left: 0;
+            position: absolute;
+        }
+
+        &:not(:checked)+span::after {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            border: 2px solid black;
+            top: 0px;
+            z-index: 0;
+        }
+
+        &:checked {
+            +span:before {
+                top: 0;
+                left: 1px;
+                width: 8px;
+                height: 13px;
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-right: 2px solid red;
+                border-bottom: 2px solid red;
+                transform: rotateZ(37deg);
+                transform-origin: 100% 100%;
+            }
+
+            +span:after {
+                top: 0;
+                width: 20px;
+                height: 20px;
+                border: 2px solid red;
+                background-color: red;
+                z-index: 0;
+            }
+        }
+    }
+}
