@@ -18,6 +18,9 @@ extra:
       link: https://github.com/halak
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/halakshin
+google_analytics:
+  - UA-165576766-1
+  - auto
 markdown_extensions:
   - toc:
       permalink: true
