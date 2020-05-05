@@ -6,7 +6,17 @@
       "script": "watch",
       "group": "build",
       "problemMatcher": [],
-      "label": "npm: watch",
+      "label": "npm: watch"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "npm: test",
     },
     {
       "type": "npm",
