@@ -1,67 +1,42 @@
+@use "@material/button";
+@use "@material/form-field/mdc-form-field";
+@use "@material/checkbox/mdc-checkbox";
+@include button.core-styles;
+
 canvas[data-src] {
     border: 1px solid black;
 }
 
-.bitfield {
-    display: flex;
-    flex-direction: row;
+.ieee-754 {
+    // button {
+    // }
 
-    label {
-        width: 20px;
-        height: 20px;
-        flex: 1;
+    & > div {
+        display: flex;
+
+        h5 {
+            flex: 0 0 4em;
+            margin: auto;            
+        }
+
+        & > div {
+            flex: 1;
+        }
     }
 
-    [type="checkbox"]:not(:checked),
-    [type="checkbox"]:checked {
-        position: absolute;
-        opacity: 0;
-        pointer-events: none;
-    }
+    .output {
+        display: block;
+        margin-top: 1em;
 
-    [type="checkbox"] {
-        +span {
-            position: relative;
-            user-select: none;
-        }
-        +span:before,
-        +span:after {
-            content: '';
-            left: 0;
-            position: absolute;
-        }
-
-        &:not(:checked)+span::after {
-            height: 20px;
-            width: 20px;
-            background-color: transparent;
-            border: 2px solid black;
-            top: 0px;
-            z-index: 0;
-        }
-
-        &:checked {
-            +span:before {
-                top: 0;
-                left: 1px;
-                width: 8px;
-                height: 13px;
-                border-top: 2px solid transparent;
-                border-left: 2px solid transparent;
-                border-right: 2px solid red;
-                border-bottom: 2px solid red;
-                transform: rotateZ(37deg);
-                transform-origin: 100% 100%;
-            }
-
-            +span:after {
-                top: 0;
-                width: 20px;
-                height: 20px;
-                border: 2px solid red;
-                background-color: red;
-                z-index: 0;
-            }
+        output {
+            background-color: var(--md-code-bg-color);
+            border-radius: .1rem;
+            font-family: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+            font-size: 0.85em;
+            display: block;
+            overflow-wrap: break-word;
+            padding: 0.525rem 1.1764705882em;
+            margin: 0.5em 0;
         }
     }
 }

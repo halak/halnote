@@ -15,6 +15,9 @@
     "deploy": "npm run build && node deploy.js"
   },
   "dependencies": {
+    "@material/button": "^6.0.0",
+    "@material/checkbox": "^6.0.0",
+    "@material/form-field": "^6.0.0",
     "lit-html": "^1.2.1"
   },
   "devDependencies": {

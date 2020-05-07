@@ -1,44 +1,64 @@
 ---
-title: 32비트 단정밀도
+title: 부동 소수점 시뮬레이터 (32bit)
 ---
 
-<form data-handler="ieee-754">
-    <div class="bitfield">
-        <label><input type="checkbox" name="bit1" /><span>Bit 1</span></label>
-        <label><input type="checkbox" name="bit2" /><span>Bit 2</span></label>
-        <label><input type="checkbox" name="bit3" /><span>Bit 3</span></label>
-        <label><input type="checkbox" name="bit4" /><span>Bit 4</span></label>
-        <label><input type="checkbox" name="bit5" /><span>Bit 5</span></label>
-        <label><input type="checkbox" name="bit6" /><span>Bit 6</span></label>
-        <label><input type="checkbox" name="bit7" /><span>Bit 7</span></label>
-        <label><input type="checkbox" name="bit8" /><span>Bit 8</span></label>
-        <label><input type="checkbox" name="bit9" /><span>Bit 9</span></label>
-        <label><input type="checkbox" name="bit10" /><span>Bit 10</span></label>
-        <label><input type="checkbox" name="bit11" /><span>Bit 11</span></label>
-        <label><input type="checkbox" name="bit12" /><span>Bit 12</span></label>
-        <label><input type="checkbox" name="bit13" /><span>Bit 13</span></label>
-        <label><input type="checkbox" name="bit14" /><span>Bit 14</span></label>
-        <label><input type="checkbox" name="bit15" /><span>Bit 15</span></label>
-        <label><input type="checkbox" name="bit16" /><span>Bit 16</span></label>
-        <label><input type="checkbox" name="bit17" /><span>Bit 17</span></label>
-        <label><input type="checkbox" name="bit18" /><span>Bit 18</span></label>
-        <label><input type="checkbox" name="bit19" /><span>Bit 19</span></label>
-        <label><input type="checkbox" name="bit20" /><span>Bit 20</span></label>
-        <label><input type="checkbox" name="bit21" /><span>Bit 21</span></label>
-        <label><input type="checkbox" name="bit22" /><span>Bit 22</span></label>
-        <label><input type="checkbox" name="bit23" /><span>Bit 23</span></label>
-        <label><input type="checkbox" name="bit24" /><span>Bit 24</span></label>
-        <label><input type="checkbox" name="bit25" /><span>Bit 25</span></label>
-        <label><input type="checkbox" name="bit26" /><span>Bit 26</span></label>
-        <label><input type="checkbox" name="bit27" /><span>Bit 27</span></label>
-        <label><input type="checkbox" name="bit28" /><span>Bit 28</span></label>
-        <label><input type="checkbox" name="bit29" /><span>Bit 29</span></label>
-        <label><input type="checkbox" name="bit30" /><span>Bit 30</span></label>
-        <label><input type="checkbox" name="bit31" /><span>Bit 31</span></label>
-        <label><input type="checkbox" name="bit32" /><span>Bit 32</span></label>
+# 부동 소수점 시뮬레이터 (32bit)
+
+일반적으로 부동 소수점 형식을 [JSON](https://www.json.org/json-en.html)과 같은 문자열 형식으로 직렬화할 때 특정 자리에서 반올림하거나 버려서 저장합니다. 이 경우 값을 다시 읽으면 저장한 값과는 다른 값으로 파싱될 가능성이 높습니다.<br />
+이 페이지에서는 2진수 기반의 32비트 부동소수점이 정확히 10진수로 표현하면 어떤 값을 나타내는지 확인할 수 있습니다.<br />
+
+<form class="ieee-754" data-handler="ieee-754">
+    <div class="">
+        <h5>부호</h5>
+        <div>
+            {{ checkbox('bit1') }}
+        </div>
     </div>
-    <div></div>
-    <div>
-        <output name="interpreted-value" for="bit1 bit2 bit3 bit4 bit5 bit6 bit7 bit8 bit9 bit10 bit11 bit12 bit13 bit14 bit15 bit16 bit17 bit18 bit19 bit20 bit21 bit22 bit23 bit24 bit25 bit26 bit27 bit28 bit29 bit30 bit31 bit32"></output>
+    <div class="">
+        <h5>지수부</h5>
+        <div>
+            {{ checkbox('bit2') }}
+            {{ checkbox('bit3') }}
+            {{ checkbox('bit4') }}
+            {{ checkbox('bit5') }}
+            {{ checkbox('bit6') }}
+            {{ checkbox('bit7') }}
+            {{ checkbox('bit8') }}
+            {{ checkbox('bit9') }}
+        </div>
+    </div>
+    <div class="">
+        <h5>가수부</h5>
+        <div>
+            {{ checkbox('bit10') }}
+            {{ checkbox('bit11') }}
+            {{ checkbox('bit12') }}
+            {{ checkbox('bit13') }}
+            {{ checkbox('bit14') }}
+            {{ checkbox('bit15') }}
+            {{ checkbox('bit16') }}
+            {{ checkbox('bit17') }}
+            {{ checkbox('bit18') }}
+            {{ checkbox('bit19') }}
+            {{ checkbox('bit20') }}
+            {{ checkbox('bit21') }}
+            {{ checkbox('bit22') }}
+            {{ checkbox('bit23') }}
+            {{ checkbox('bit24') }}
+            {{ checkbox('bit25') }}
+            {{ checkbox('bit26') }}
+            {{ checkbox('bit27') }}
+            {{ checkbox('bit28') }}
+            {{ checkbox('bit29') }}
+            {{ checkbox('bit30') }}
+            {{ checkbox('bit31') }}
+            {{ checkbox('bit32') }}
+        </div>
+    </div>
+    <div class="output">
+        <label>
+            <h5>실제 값</h5>
+            <output name="interpreted-value" for="bit1 bit2 bit3 bit4 bit5 bit6 bit7 bit8 bit9 bit10 bit11 bit12 bit13 bit14 bit15 bit16 bit17 bit18 bit19 bit20 bit21 bit22 bit23 bit24 bit25 bit26 bit27 bit28 bit29 bit30 bit31 bit32">+0</output>
+        </label>
     </div>
 </form>
