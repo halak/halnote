@@ -8,13 +8,13 @@ title: 부동 소수점 시뮬레이터 (32bit)
 이 페이지에서는 2진수 기반의 32비트 부동소수점이 정확히 10진수로 표현하면 어떤 값을 나타내는지 확인할 수 있습니다.<br />
 
 <form class="ieee-754" data-handler="ieee-754">
-    <div class="">
+    <div class="row">
         <h5>부호</h5>
         <div>
             {{ checkbox('bit1') }}
         </div>
     </div>
-    <div class="">
+    <div class="row">
         <h5>지수부</h5>
         <div>
             {{ checkbox('bit2') }}
@@ -27,7 +27,7 @@ title: 부동 소수점 시뮬레이터 (32bit)
             {{ checkbox('bit9') }}
         </div>
     </div>
-    <div class="">
+    <div class="row">
         <h5>가수부</h5>
         <div>
             {{ checkbox('bit10') }}

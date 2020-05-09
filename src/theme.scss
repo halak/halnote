@@ -8,8 +8,13 @@ canvas[data-src] {
 }
 
 .ieee-754 {
-    // button {
-    // }
+    .row {
+        border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+
+        &:first-child {
+            border-top: none;
+        }
+    }
 
     & > div {
         display: flex;
