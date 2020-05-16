@@ -3,7 +3,7 @@ import { register } from './form';
 
 @register('ieee-754')
 export class IEEE754Form {
-    constructor(private readonly target: HTMLFormElement) {
+    constructor(target: HTMLFormElement) {
         target.addEventListener('input', (e) => {
             const target = e.target as HTMLInputElement;
             const bits = getBitString(target.form!);
