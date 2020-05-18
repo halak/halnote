@@ -43,7 +43,6 @@ title: 헷갈리기 쉬운 유니코드
 |  〇  | `U+3007` | Ideographic Number Zero | 한자 숫자 `0` |
 
 
-
 ## 생략 부호 (Ellipsis)
 
 `Midline Horizontal Ellipsis`를 수학 기호로써 $1 + 2 + 3 + \cdots$ 에 사용되는 문자로 평문을 생략할 때에는 `Horizontal Ellipsis`를 사용해야합니다.

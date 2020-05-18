@@ -27,17 +27,17 @@
 
     .output {
         display: block;
-        margin-top: 1em;
 
         output {
             background-color: var(--md-code-bg-color);
             border-radius: .1rem;
+            display: block;
             font-family: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
             font-size: 0.85em;
-            display: block;
+            margin: 0.5em 0;
+            min-height: 6.4em;
             overflow-wrap: break-word;
             padding: 0.525rem 1.1764705882em;
-            margin: 0.5em 0;
         }
     }
 }
