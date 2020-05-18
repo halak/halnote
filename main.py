@@ -2,7 +2,7 @@ def define_env(env):
     @env.macro
     def checkbox(name):
         lines = [
-            f'<div class="mdc-checkbox">',
+            f'<div id="{name}" class="mdc-checkbox">',
             f'<label>',
             f'<input type="checkbox" name="{name}" class="mdc-checkbox__native-control" />',
             f'<div class="mdc-checkbox__background">',

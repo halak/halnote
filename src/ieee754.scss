@@ -1,0 +1,43 @@
+@use "@material/button";
+@use "@material/form-field/mdc-form-field";
+@use "@material/checkbox/mdc-checkbox";
+@include button.core-styles;
+
+.ieee-754 {
+    .row {
+        border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    & > div {
+        display: flex;
+
+        h5 {
+            flex: 0 0 4em;
+            margin: auto;            
+        }
+
+        & > div {
+            flex: 1;
+        }
+    }
+
+    .output {
+        display: block;
+        margin-top: 1em;
+
+        output {
+            background-color: var(--md-code-bg-color);
+            border-radius: .1rem;
+            font-family: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+            font-size: 0.85em;
+            display: block;
+            overflow-wrap: break-word;
+            padding: 0.525rem 1.1764705882em;
+            margin: 0.5em 0;
+        }
+    }
+}
