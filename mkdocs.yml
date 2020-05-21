@@ -9,8 +9,8 @@ theme:
   favicon: 'favicon.ico'
   logo: 'assets/images/logo.svg'
   palette:
-    primary: blue
-    accent: blue
+    primary: blue grey
+    accent: indigo
 extra:
   social:
     - icon: fontawesome/brands/github
