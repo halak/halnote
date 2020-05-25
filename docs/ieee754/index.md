@@ -3,7 +3,7 @@ title: IEEE 754
 ---
 
 # IEEE 754
-[IEEE 754](https://ieeexplore.ieee.org/document/4610935)는 부동 소수점의 표현과 연산에 대해 정의한 표준 명세입니다.
+[IEEE 754](https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html)는 부동 소수점의 표현과 연산에 대해 정의한 표준 명세입니다.
 대부분의 프로그래밍 언어에서 지원하는 실수 자료 형식은 IEEE 754 명세를 기반으로 구현되어 있습니다.
 
 
