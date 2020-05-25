@@ -1,3 +1,6 @@
-title: 결정론적 게임 플레이 프로그래밍
-collapse: true
-hide: true
+title: 결정론적 게임 플레이
+arrange:
+  - index.md
+  - game-loop.md
+  - closed-world.md
+  - pseudo-random.md
