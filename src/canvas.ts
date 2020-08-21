@@ -16,7 +16,7 @@ export function register(name: string) {
 }
 
 export function configureCanvases() {
-    const canvases = document.querySelectorAll<HTMLCanvasElement>('canvas[data-src]');
+    const canvases = document.querySelectorAll<HTMLCanvasElement>("canvas[data-src]");
     if (canvases.length === 0) {
         return;
     }
@@ -28,7 +28,7 @@ export function configureCanvases() {
             return null;
         }
     })();
-    
+
     if (observer !== null) {
         canvases.forEach((canvas) => observer.observe(canvas));
     } else {
@@ -37,10 +37,10 @@ export function configureCanvases() {
 }
 
 function initializeCanvasRenderer(canvas: HTMLCanvasElement) {
-    const src = canvas.dataset.src ?? '';
+    const src = canvas.dataset.src ?? "";
 
     const constructor = constructors.get(src);
-    if (typeof constructor !== 'undefined') {
+    if (typeof constructor !== "undefined") {
         const renderer = new constructor(canvas);
         createRenderers.set(canvas, renderer);
         renderer.start();

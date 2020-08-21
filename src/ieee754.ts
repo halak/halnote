@@ -1,13 +1,13 @@
-import * as ieee754 from './core/ieee754';
-import { register } from './form';
+import * as ieee754 from "./core/ieee754";
+import { register } from "./form";
 
-@register('ieee-754')
+@register("ieee-754")
 export class IEEE754Form {
     constructor(target: HTMLFormElement) {
-        target.addEventListener('input', (e) => {
+        target.addEventListener("input", (e) => {
             const target = e.target as HTMLInputElement;
             const bits = getBitString(target.form!);
-            const output = (target.form!).querySelector('[name="interpreted-value"]');
+            const output = (target.form!).querySelector(`[name="interpreted-value"]`);
             if (output === null) {
                 return;
             }
@@ -27,8 +27,8 @@ function getBitString(form: HTMLFormElement): string {
     const data = new Map<string, boolean>();
     for (let i = 0; i < elements.length; i++) {
         const element = elements.item(i);
-        if (element instanceof HTMLInputElement && element.type === 'checkbox') {
-            if (element.name.startsWith('bit')) {
+        if (element instanceof HTMLInputElement && element.type === "checkbox") {
+            if (element.name.startsWith("bit")) {
                 data.set(element.name, element.checked);
             }
         }
@@ -38,12 +38,12 @@ function getBitString(form: HTMLFormElement): string {
         const bits = [];
         for (let i = 1; i <= data.size; i++) {
             if (data.get(`bit${i}`) === true) {
-                bits.push('1');
+                bits.push("1");
             } else {
-                bits.push('0');
+                bits.push("0");
             }
         }
-        return bits.join('');
+        return bits.join("");
     } else {
         throw new Error();
     }

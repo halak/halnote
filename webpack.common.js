@@ -1,17 +1,17 @@
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
     entry: {
-        'main': './src/main.ts',
-        'theme': './src/theme.scss',
+        "main": "./src/main.ts",
+        "theme": "./src/theme.scss",
     },
     output: {
-        path: path.join(process.cwd(), 'docs/assets'),
-        filename: 'javascripts/[name].js'
+        path: path.join(process.cwd(), "docs/assets"),
+        filename: "javascripts/[name].js"
     },
     optimization: {
         minimize: true,
@@ -20,11 +20,11 @@ module.exports = {
             new OptimizeCSSAssetsPlugin({}),
         ],
     },
-    performance: { hints: 'warning' },
+    performance: { hints: "warning" },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'stylesheets/[name].css',
-            chunkFilename: 'stylesheets/[id].css',
+            filename: "stylesheets/[name].css",
+            chunkFilename: "stylesheets/[id].css",
         }),
     ],
     module: {
@@ -32,21 +32,21 @@ module.exports = {
             {
                 test: /\.ts$/i,
                 exclude: /node_modules|venv|site/,
-                use: 'ts-loader',
+                use: "ts-loader",
             },
             {
                 test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules|venv|site/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader' },
+                    { loader: "css-loader" },
                     {
-                        loader: 'sass-loader',
+                        loader: "sass-loader",
                         options: {
-                            implementation: require('sass'),
+                            implementation: require("sass"),
                             webpackImporter: false,
                             sassOptions: {
-                                includePaths: ['./node_modules'],
+                                includePaths: ["./node_modules"],
                             },
                         },
                     },
@@ -55,7 +55,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js', '.scss'],
-        modules: ['node_modules'],
+        extensions: [".ts", ".js", ".scss"],
+        modules: ["node_modules"],
     }
 };

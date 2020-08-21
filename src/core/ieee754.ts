@@ -36,7 +36,7 @@ function createBitString(bits: string): BitString {
 }
 
 function interpret(sign: BitString, exponent: BitString, mantissa: BitString): string {
-    const s = sign.int === 0 ? '+' : '-';
+    const s = sign.int === 0 ? "+" : "-";
     if (exponent.int === 0) {
         if (mantissa.int === 0) {
             return `${s}0`;
@@ -48,7 +48,7 @@ function interpret(sign: BitString, exponent: BitString, mantissa: BitString): s
         if (mantissa.int === 0) {
             return `${s}∞`;
         } else {
-            return 'NaN';
+            return "NaN";
         }
     } else {
         const bias = (1 << (exponent.bits.length - 1)) - 1;
@@ -67,7 +67,7 @@ function interpretNormalNumber(exponent: number, mantissa: BitString): string {
         let integerPart = ZERO;
         let base = ONE;
         for (let i = exponent - 1; i >= 0; i--, base *= TWO) {
-            if (mantissa.bits[i] === '1') {
+            if (mantissa.bits[i] === "1") {
                 integerPart += base;
             }
         }
@@ -75,7 +75,7 @@ function interpretNormalNumber(exponent: number, mantissa: BitString): string {
         integerPart += base;
 
         const fractionalPart = calculateFractionalPart(0, 0, mantissa.bits, exponent);
-        if (fractionalPart === '0') {
+        if (fractionalPart === "0") {
             return `${integerPart}`;
         } else {
             return `${integerPart}.${fractionalPart}`;
@@ -103,9 +103,9 @@ function calculateFractionalPart(exponent: number, leadingSignificandBit: number
         base *= FIVE;
     }
 
-    const end = mantissa.lastIndexOf('1') + 1;
+    const end = mantissa.lastIndexOf("1") + 1;
     for (let i = start; i < end; i++, value *= TEN, base *= FIVE) {
-        if (mantissa[i] === '1') {
+        if (mantissa[i] === "1") {
             value += base;
         }
     }
@@ -113,5 +113,5 @@ function calculateFractionalPart(exponent: number, leadingSignificandBit: number
     value /= TEN;
 
     const digits = Math.abs(exponent) + (end - start);
-    return value.toString().padStart(digits, '0');
+    return value.toString().padStart(digits, "0");
 }
