@@ -1,5 +1,8 @@
 {
     "files.associations": {
         ".pages": "yaml"
+    },
+    "files.exclude": {
+        "__pycache__": true
     }
 }
